@@ -1,0 +1,9 @@
+[Flags]
+AllowDownload=False
+ServerSideOnly=True
+ClientOptional=False
+Official=False
+
+[Package_Description]
+UTAN - Unreal Trusted Admin Network
+
