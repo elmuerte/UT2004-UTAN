@@ -7,7 +7,7 @@
 																				<br />
 	Copyright 2004 Michiel "El Muerte" Hendriks									<br />
 	...UTAN License ...
-	<!-- $Id: UpdateAP.uc,v 1.3 2004/04/19 08:31:00 elmuerte Exp $ -->
+	<!-- $Id: UpdateAP.uc,v 1.4 2004/04/20 08:38:02 elmuerte Exp $ -->
 *******************************************************************************/
 
 class UpdateAP extends Info config;
@@ -162,10 +162,10 @@ function bool IsIDBan(out string AP)
 static function FillPlayInfo(PlayInfo PlayInfo)
 {
 	super.FillPlayInfo(PlayInfo);
-	PlayInfo.AddSetting("UTAN", "APLocation", 		default.PILabel[0], 255, 1, "Text"	,,"",,true);
-	PlayInfo.AddSetting("UTAN", "UpdateInterval", 	default.PILabel[1], 255, 2, "Text"	,"5;1-99999","",,true);
-	PlayInfo.AddSetting("UTAN", "PurgeOnUpdate", 	default.PILabel[2], 255, 3, "Check"	,,"",,true);
-	PlayInfo.AddSetting("UTAN", "OnlyAdd", 			default.PILabel[3], 255, 4, "Check"	,,"",,true);
+	PlayInfo.AddSetting("UTAN", "APLocation", 		default.PILabel[0], 255, 1, "Text"	,);
+	PlayInfo.AddSetting("UTAN", "UpdateInterval", 	default.PILabel[1], 255, 2, "Text"	,"5;1-99999");
+	PlayInfo.AddSetting("UTAN", "PurgeOnUpdate", 	default.PILabel[2], 255, 3, "Check"	,);
+	PlayInfo.AddSetting("UTAN", "OnlyAdd", 			default.PILabel[3], 255, 4, "Check"	,);
 }
 
 static event string GetDescriptionText(string PropName)
