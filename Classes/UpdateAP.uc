@@ -7,7 +7,7 @@
 																				<br />
 	Copyright 2004 Michiel "El Muerte" Hendriks									<br />
 	...UTAN License ...
-	<!-- $Id: UpdateAP.uc,v 1.2 2004/04/18 20:24:50 elmuerte Exp $ -->
+	<!-- $Id: UpdateAP.uc,v 1.3 2004/04/19 08:31:00 elmuerte Exp $ -->
 *******************************************************************************/
 
 class UpdateAP extends Info config;
@@ -149,10 +149,14 @@ function int now()
 }
 
 /** returns true when the ban is a ID ban */
-function bool IsIDBan(string AP)
+function bool IsIDBan(out string AP)
 {
-	AP = Left(AP, InStr(AP, ";"));
-	return !((AP ~= "ACCEPT") || (AP ~= "DENY"));
+	local string check;
+	local int i;
+	i = InStr(AP, "=");
+	check = Left(AP, i);
+	AP = Mid(AP, i+1);
+	return (check ~= "BannedIDs");
 }
 
 static function FillPlayInfo(PlayInfo PlayInfo)
